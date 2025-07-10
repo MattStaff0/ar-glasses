@@ -4,11 +4,11 @@
 from google import genai
 from google.genai import types
 
-_client = genai.Client()
+client = genai.Client(api_key=)
 
 def call_gemini_api(prompt):
     # making the response object
-    response = _client.models.generate_content(
+    response = client.models.generate_content(
         model="gemini-2.5-flash",
         contents=prompt,
         config=types.GenerateContentConfig(
